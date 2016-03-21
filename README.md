@@ -25,7 +25,7 @@ Please visit our wiki for further project info:
 ### [Team Page](https://github.com/oronsa/shoulder2shoulder/wiki/team)
 
 ### Project Documents
-- [Project Idea]() ([Presentation](https://github.com/oronsa/shoulder2shoulder/blob/master/Doc/The%20general%20idea.pptx))
+- [Presentation](https://github.com/oronsa/shoulder2shoulder/blob/master/Doc/The%20general%20idea.pptx)
 - [Project Inception](https://github.com/oronsa/shoulder2shoulder/wiki/inception)
 - [Software Requirements Specification](../../wiki/)
 - [Software Design Specification](../../wiki/)
