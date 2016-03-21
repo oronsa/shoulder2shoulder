@@ -6,14 +6,8 @@
     app.directive('home', function(){
         return {
             restrict: 'E',
-            templateUrl: "web%20data/home.html",
-            controller: function () {
-                this.hello = function () {
-                    alert("hello")
-                };
-            },
-            controllerAs: "homeC"
-        }
+            templateUrl: "web%20data/home.html"
+            }
     });
     var app1=angular.module('about',[]);
     app1.directive('about', function(){
