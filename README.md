@@ -6,7 +6,7 @@
 ####We will find the specific solutions for you! 
 <br />
 
-## Please visit our [live application](https://demo.reactstarterkit.com/)
+## Please visit our [live application](http://accountingshoulder.azurewebsites.net/)
 
 [![Gitter](https://badges.gitter.im/oronsa/shoulder2shoulder.svg)](https://gitter.im/oronsa/shoulder2shoulder?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 <br />
