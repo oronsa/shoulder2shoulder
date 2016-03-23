@@ -1,10 +1,55 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <div class="fillForm"  ng-show="tab.isSet(3)">
-<form>
-    First name:<br>
-    <input type="text" name="firstname"><br>
-    Last name:<br>
-    <input type="text" name="lastname">
-</form>
+
+	<form  dir="rtl">
+		<fieldset class="form-group">
+			<br>
+			<label for="incoming">משכורת</label>
+			<input type="incominig" placeholder="הכנס משכורת">
+		</fieldset>
+		
+		<fieldset class="form-group">
+			<label for="Date">תאריך:</label>
+				<input type="date" name="Date" min="day" value=today required>
+		</fieldset>
+		
+    	<fieldset class="form-group">
+    		<label for="exampleInputFile">העלה משכורת</label>
+			<input type="file" class="form-control-file" id="exampleInputFile">
+    		<small class="text-muted">הקובץ שאתה מעלה נישמר בצורה מאובטחת</small>
+  		</fieldset>
+  		
+		
+
+  		<fieldset class="form-group">
+    		<label for="exampleSelect1">כמות כרטיסי אשראי בשימוש</label>
+    		<select class="form-control" id="exampleSelect1">
+				<option>1</option>
+      			<option>2</option>
+      			<option>3</option>
+				<option>4</option>
+    		</select>
+  		</fieldset>
+		<fieldset class="form-group">
+			<br>
+			<label for="out">הוצאות כ.אשראי</label>
+			<input type="incominig" placeholder="סה''כ הוצאות">
+		</fieldset>
+			<fieldset class="form-group">
+    		<label for="exampleInputFile">העלה פירוט אשראי</label>
+			<input type="file" class="form-control-file" id="exampleInputFile1">
+    		<small class="text-muted">הקובץ שאתה מעלה נישמר בצורה מאובטחת</small>
+  		</fieldset>
+
+  		<fieldset class="form-group">
+    		<label for="exampleTextarea">תיאור הוצאות החודשיות</label>
+    		<textarea class="form-control" id="exampleTextarea" rows="6"></textarea>
+  		</fieldset>
+		<button type="submit" class="btn btn-primary">שלח</button>
+	</form>
     <br>
     <p>soon....</p>
     </div>

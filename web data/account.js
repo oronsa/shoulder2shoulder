@@ -31,8 +31,8 @@
         };
     });
 
-    var app3=angular.module('logIn',[]);
-    app3.directive('logIn', function(){
+    var app4=angular.module('logIn',[]);
+    app4.directive('logIn', function(){
         return {
             restrict: 'E',
             templateUrl: "web%20data/log-in.html"
