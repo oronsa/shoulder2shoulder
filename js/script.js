@@ -5,7 +5,7 @@
     app.directive('navBar', function() {
         return {
             restrict: 'E',
-            templateUrl: "web%20data/nav-bar.html",
+            templateUrl: "templates/nav-bar.html",
             controller: function () {
                     this.tab=1;
                 this.isSet = function (checkTab) {
