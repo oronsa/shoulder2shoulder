@@ -20,7 +20,7 @@ This project is developed as part of the requirements for a [software engineerin
 
 Please visit our wiki for further project info: 
 
-### [User Manual]() (Coming Soon...)
+### [User Manual](https://github.com/oronsa/shoulder2shoulder/wiki/user-manual)
 
 ### [Team Page](https://github.com/oronsa/shoulder2shoulder/wiki/team)
 
