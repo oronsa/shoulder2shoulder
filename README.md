@@ -13,7 +13,7 @@
 
 Our Email
 Software.A.Team@gmail.com
-## [Issue Board](https://huboard.com/robi-y/seproject-team-template#/) (Coming Soon...)
+## [Issue Board](https://github.com/oronsa/shoulder2shoulder/Issues/) (Coming Soon...)
 
 ## Disclaimer
 This project is developed as part of the requirements for a [software engineering course](https://github.com/jce-il/se-class/wiki) at the software engineering department - [Azrieli College of Engineering](http://www.jce.ac.il/), Jerusalem, Israel.
