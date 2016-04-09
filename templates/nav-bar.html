@@ -1,16 +1,15 @@
-
-<div class="container">
-    <nav class="navbar navbar-inverse navbar-static-top ">
+<!--	<div class="navbar-wrapper">
         <div class="container">
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+		 <nav class="navbar navbar-inverse navbar-static-top">
+			 <nav class="nav navbar-nav">
                         <li ng-class="{ active:tab.isSet(1) }">
                             <a href="#home" ng-click="tab.setTab(1)">Home</a>
                         </li>
                         <li ng-class="{ active:tab.isSet(2) }">
                             <a href="#about" ng-click="tab.setTab(2)">About Us</a>
                         </li>
-                     <li class="dropdown">
+				 		<!--
+                     	<li class="dropdown">
                             <a href="#action" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li ng-class="{ active:tab.isSet(3) }">
@@ -26,15 +25,72 @@
                                 </li>
                             </ul>
                         </li>
+						tnur kfkkfs>>
                     <li ng-class="{ active:tab.isSet(6) }">
                         <a href="#gallery" ng-click="tab.setTab(6)">gallery</a>
                     </li>
-                    <li ng-class="{ active:tab.isSet(7)}">
-                        <a href="#myModal" ng-click="tab.setTab(7)"  data-toggle="modal"
-                           data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Log-in</a></li>
-                </ul>
-            </div>
+					<li class="dropdown">
+                        <a href="#action" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-log-in"></span> Log-in</a>
+						<ul class="dropdown-menu" >
+							<li ng-class="{ active:tab.isSet(7)}" >
+								<a href="#myModal" ng-click="tab.setTab(7)" data-toggle="modal"
+											   data-target="#myModal" ><span class="glyphicon glyphicon-log-in"></span> כניסה
+								</a>
+							</li>
+							<li ng-class="{ active:tab.isSet(8)}">
+								<a href="#myModal" ng-click="tab.setTab(8)"  data-toggle="modal"
+											   data-target="#myModal" ><span class="glyphicon glyphicon-log-in"></span> הירשם
+								</a>
+								
+							</li>
+						 </ul>
+                    </li>	
+				</nav>
+            </nav>
         </div>
-    </nav>
 </div>
+--->
+
+   <div class="navbar-wrapper">
+        <nav class="navbar navbar-inverse navbar-static-top ">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Accounting Shoulder</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li ng-class="{ active:tab.isSet(1) }">
+                            <a href="#home" ng-click="tab.setTab(1)">Home</a>
+                </li>
+                <li ng-class="{ active:tab.isSet(2) }">
+                            <a href="#about" ng-click="tab.setTab(2)">About Us</a>
+                </li>
+          		<li ng-class="{ active:tab.isSet(6) }">
+                        <a href="#gallery" ng-click="tab.setTab(6)">gallery</a>
+                </li>      	
+             	<li class="dropdown">
+                	<a href="#action" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-log-in"></span> Log-in</a>
+					<ul class="dropdown-menu" >
+						<li ng-class="{ active:tab.isSet(7)}" >
+							<a href="#myModal" ng-click="tab.setTab(7)" data-toggle="modal"
+											   data-target="#myModal" ><span class="glyphicon glyphicon-log-in"></span> כניסה
+							</a>
+						</li>
+						<li ng-class="{ active:tab.isSet(8)}">
+							<a href="#myModal" ng-click="tab.setTab(8)"  data-toggle="modal"
+										   data-target="#myModal" ><span class="glyphicon glyphicon-log-in"></span> הירשם
+							</a>
+								
+						</li>
+					</ul>
+                 </li> 
+              </ul>
+            </div>
+        </nav>
+    </div>
 

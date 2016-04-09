@@ -16,23 +16,17 @@
             templateUrl: "templates/about.html"
         };
     });
-    var app2=angular.module('action',[]);
-    app2.directive('action', function(){
-        return {
-            restrict: 'E',
-            templateUrl: "templates/action.html"
-        };
-    });
-    var app3=angular.module('gallery',[]);
-    app3.directive('gallery', function(){
+
+    var app2=angular.module('gallery',[]);
+    app2.directive('gallery', function(){
         return {
             restrict: 'E',
             templateUrl: "templates/gallery.html"
         };
     });
 
-    var app4=angular.module('logIn',[]);
-    app4.directive('logIn', function(){
+    var app3=angular.module('logIn',[]);
+    app3.directive('logIn', function(){
         return {
             restrict: 'E',
             templateUrl: "templates/log-in.html"

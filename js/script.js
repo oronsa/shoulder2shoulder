@@ -1,6 +1,6 @@
 (function() {
 
-    var app=angular.module('navigation', ['home','about','action','gallery','logIn']);
+    var app=angular.module('navigation', ['home','about','gallery','logIn']);
 
     app.directive('navBar', function() {
         return {
