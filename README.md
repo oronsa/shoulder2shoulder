@@ -13,14 +13,14 @@
 
 Our Email
 Software.A.Team@gmail.com
-## [Issue Board](https://huboard.com/robi-y/seproject-team-template#/) (Coming Soon...)
+## [Issue Board](https://github.com/oronsa/shoulder2shoulder/issues)
 
 ## Disclaimer
 This project is developed as part of the requirements for a [software engineering course](https://github.com/jce-il/se-class/wiki) at the software engineering department - [Azrieli College of Engineering](http://www.jce.ac.il/), Jerusalem, Israel.
 
 Please visit our wiki for further project info: 
 
-### [User Manual]() (Coming Soon...)
+### [User Manual](https://github.com/oronsa/shoulder2shoulder/wiki/user-manual)
 
 ### [Team Page](https://github.com/oronsa/shoulder2shoulder/wiki/team)
 
@@ -32,10 +32,10 @@ Please visit our wiki for further project info:
 - [Organization Facebook page] (https://www.facebook.com/kateflekatef)
 
 ### Iteration Pages
-- [Iteration 0 - ZFR]()
-- [Iteration 1 - MVP]()
+- [Iteration 0 - ZFR](https://github.com/oronsa/shoulder2shoulder/wiki/ZFR)
+- [Iteration 1 - MVP](https://github.com/oronsa/shoulder2shoulder/wiki/MVP)
 - [Iteration 2 - Feature X]()
 - [Iteration 3 - Feature Y]()
 - [Iteration 4 - Feature Z]()
 
-
+####[Developers page](https://github.com/oronsa/shoulder2shoulder/wiki/Documentation-Page)

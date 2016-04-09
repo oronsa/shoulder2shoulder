@@ -6,28 +6,28 @@
     app.directive('home', function(){
         return {
             restrict: 'E',
-            templateUrl: "web%20data/home.html"
+            templateUrl: "templates/home.html"
             }
     });
     var app1=angular.module('about',[]);
     app1.directive('about', function(){
         return {
             restrict: 'E',
-            templateUrl: "web%20data/about.html"
+            templateUrl: "templates/about.html"
         };
     });
     var app2=angular.module('action',[]);
     app2.directive('action', function(){
         return {
             restrict: 'E',
-            templateUrl: "web%20data/action.html"
+            templateUrl: "templates/action.html"
         };
     });
     var app3=angular.module('gallery',[]);
     app3.directive('gallery', function(){
         return {
             restrict: 'E',
-            templateUrl: "web%20data/gallery.html"
+            templateUrl: "templates/gallery.html"
         };
     });
 
@@ -35,7 +35,7 @@
     app4.directive('logIn', function(){
         return {
             restrict: 'E',
-            templateUrl: "web%20data/log-in.html"
+            templateUrl: "templates/log-in.html"
         };
     });
 })();
