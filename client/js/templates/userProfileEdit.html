@@ -1,0 +1,251 @@
+
+<div class="row" dir="rtl">
+    <div class="col-lg-12">
+        <h1 class="page-header">החשבון שלי</h1>
+    </div>
+    <div class="col-lg-12">
+        <div class="panel panel-platColor4">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-mail-forward"></i> פרטים איישים </h3>
+            </div>
+            <form name="changePersonalForm" ng-submit="confirmPersonal()">
+                <div class="panel-body">
+                    <md-content layout-padding="">
+                        <div ng-show="sections['personal']">
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>שם פרטי</label>
+                                    <input name="firstName" ng-pattern="regexName" ng-model="userData.firstName"
+                                           type="text">
+                                    <div ng-messages="changePersonalForm.firstName.$error">
+                                        <div ng-message="pattern">
+                                            שם פרטי צריך להיות באותיות בעברית בלבד
+                                        </div>
+                                    </div>
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>שם משפחה</label>
+                                    <input name="lastName" ng-pattern="regexName" ng-model="userData.lastName"
+                                           type="text">
+                                    <div ng-messages="changePersonalForm.lastName.$error">
+                                        <div ng-message="pattern">
+                                            שם משפחה צריך להיות באותיות בעברית בלבד
+                                        </div>
+                                    </div>
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>שם משתמש</label>
+                                    <input name="userName"  ng-pattern="regexUserName" ng-model="userData.userName" type="text">
+                                    <div ng-messages="changePersonalForm.userName.$error">
+                                        <div ng-message="pattern">
+                                            שם משתמש צריך להיות באותיות באנגלית בלבד ומספרים לדוגמא: yosi570
+                                        </div>
+                                    </div>
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>טלפון</label>
+                                    <input name="phone1" ng-pattern="regexPhone" ng-model="userData.phone1" type="text">
+                                    <div ng-messages="changePersonalForm.phone1.$error">
+                                        <div ng-message="pattern">
+                                            מספר טלפון 1 אינו תקין, הזן שנית לדוגמא: 0509090909
+                                        </div>
+                                    </div>
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>טלפון נוסף</label>
+                                    <input name="phone2" ng-pattern="regexPhone" ng-model="userData.phone2" type="text">
+                                    <div ng-messages="changePersonalForm.phone2.$error">
+                                        <div ng-message="pattern">
+                                            מספר טלפון 2 אינו תקין, הזן שנית לדוגמא: 0509090909
+                                        </div>
+                                    </div>
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>כתובת</label>
+                                    <input  ng-model="userData.address" type="text">
+                                </md-input-container>
+                            </div>
+                            <div layout-gt-sm="row">
+                                <md-button type="submit" class="md-raised md-primary">אישור</md-button>
+                                <md-button class="md-raised md-primary" ng-click="cancelPersonal()">ביטול</md-button>
+                            </div>
+                        </div>
+
+                        <div ng-show="!sections['personal']">
+
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>שם פרטי</label>
+                                    <input ng-model="userData.firstName" type="text" disabled>
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>שם משפחה</label>
+                                    <input ng-model="userData.lastName" type="text" disabled>
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>שם משתמש</label>
+                                    <input ng-model="userData.userName" type="text" disabled>
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>טלפון</label>
+                                    <input ng-model="userData.phone1" type="text" disabled>
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>טלפון נוסף</label>
+                                    <input ng-model="userData.phone2" type="text" disabled>
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>כתובת</label>
+                                    <input ng-model="userData.address" type="text" disabled>
+                                </md-input-container>
+                            </div>
+
+                            <div layout-gt-sm="row">
+                                <md-button class="md-raised md-primary" ng-click="editDetails('personal')">ערוך
+                                </md-button>
+                            </div>
+                        </div>
+                    </md-content>
+                </div>
+            </form>
+            <div class="panel-footer">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="panel panel-platColor3">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-mail"></i> דואר אלקטרוני </h3>
+            </div>
+            <form name="ChangeMailForm" ng-submit="changeEmail()">
+                <div class="panel-body">
+                    <md-content layout-padding="">
+                        <div ng-show="sections['email']">
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>דואר אלקטורני</label>
+                                    <input ng-model="data.email" type="text">
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>הקלד אימייל חדש</label>
+                                    <input type="text" ng-pattern="regexMail" name="newEmail" ng-model="data.newEmail"
+                                           required>
+                                    <div ng-messages="ChangeMailForm.newEmail.$error">
+                                        <div ng-message="pattern">
+                                            הזן כתובת מייל תקינה
+                                        </div>
+                                        <div ng-message="required">
+                                            שדה חובה
+                                        </div>
+                                    </div>
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>הקלד אימייל חדש בשנית</label>
+                                    <input type="text" ng-pattern="regexMail" name="newEmailConfirmation"
+                                           ng-model="data.newEmailConfirmation" required>
+                                    <div ng-messages="ChangeMailForm.newEmailConfirmation.$error">
+                                        <div ng-message="pattern">
+                                            הזן כתובת מייל תקינה
+                                        </div>
+                                        <div ng-message="required">
+                                            שדה חובה
+                                        </div>
+                                    </div>
+                                </md-input-container>
+                            </div>
+
+                            <div layout-gt-sm="row">
+                                <md-button type="submit" class="md-raised md-primary">אישור</md-button>
+                                <md-button class="md-raised md-primary" ng-click="cancelEmail()">ביטול</md-button>
+                            </div>
+                        </div>
+                        <div ng-show="!sections['email']">
+                            <md-input-container class="md-block" flex-gt-sm="">
+                                <label>דואר אלקטורני</label>
+                                <input ng-model="data.email" type="text" disabled>
+                            </md-input-container>
+                            <div layout-gt-sm="row">
+                                <md-button class="md-raised md-primary" ng-click="editDetails('email')">ערוך</md-button>
+                            </div>
+                        </div>
+
+                    </md-content>
+                </div>
+            </form>
+            <div class="panel-footer">
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="panel panel-platColor5">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-key"></i> סיסמא </h3>
+            </div>
+            <form name="ChangePasswordForm" ng-submit="changePassword()">
+                <div class="panel-body">
+                    <md-content layout-padding="">
+                        <div ng-show="sections['passowrd']">
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>סיסמא נוכחית</label>
+                                    <input name="oldPassword" ng-model="data.oldPassword" type="password" required>
+                                    <div ng-messages="ChangePasswordForm.oldPassword.$error">
+
+                                        <div ng-message="required">
+                                            שדה חובה
+                                        </div>
+                                    </div>
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>הקלד סיסמא חדשה</label>
+                                    <input name="newPassword" ng-pattern="regexPassword" ng-model="data.newPassword"
+                                           type="password" required>
+                                    <div ng-messages="ChangePasswordForm.newPassword.$error">
+                                        <div ng-message="pattern">
+                                            סיסמא צריכה להכיל אות קטנה אות גדולה ומספרים באורך של 6 תווים לפחות
+                                        </div>
+                                        <div ng-message="required">
+                                            שדה חובה
+                                        </div>
+                                    </div>
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>חזור על הסיסמא החדשה</label>
+                                    <input name="confirmNewPassword" ng-pattern="regexPassword"
+                                           ng-model="data.confirmNewPassword" type="password" required>
+                                    <div ng-messages="ChangePasswordForm.confirmNewPassword.$error">
+                                        <div ng-message="pattern">
+                                            סיסמא צריכה להכיל אות קטנה אות גדולה ומספרים באורך של 6 תווים לפחות
+                                        </div>
+                                        <div ng-message="required">
+                                            שדה חובה
+                                        </div>
+                                    </div>
+                                </md-input-container>
+                            </div>
+
+                            <div layout-gt-sm="row">
+                                <md-button type="submit" class="md-raised md-primary">אישור</md-button>
+                                <md-button class="md-raised md-primary" ng-click="cancelPassword()">ביטול</md-button>
+                            </div>
+                        </div>
+                        <div ng-show="!sections['passowrd']">
+                            <md-input-container class="md-block" flex-gt-sm="">
+                                <label>סיסמא</label>
+                                <input ng-model="data.oldPassword" type="password" disabled>
+                            </md-input-container>
+                            <div layout-gt-sm="row">
+                                <md-button class="md-raised md-primary" ng-click="editDetails('passowrd')">ערוך
+                                </md-button>
+                            </div>
+                        </div>
+
+                    </md-content>
+                </div>
+            </form>
+            <div class="panel-footer">
+            </div>
+        </div>
+    </div>
+</div>

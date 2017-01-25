@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4"id="logP">
+        <img src="style/gallery/logo.PNG"/>
+        <h4 class="modal-title">שחזור סיסמא</h4>
+        <form name="authenticaterForm" ng-submit="submitData()" role="form">
+            <md-input-container class="md-icon-float md-block" ng-pattern="regexMail" style="text-align: right">
+                <input name="email" class="form-control" ng-pattern="regexMail" ng-model="data.email" placeholder="הכנס מייל" type="text" required>
+                <div ng-messages="authenticaterForm.email.$error">
+                    <div ng-message="required">
+                        שדה חובה
+                    </div>
+                    <div ng-message="pattern">
+                        <div class="alert alert-warning">
+                            <strong>טעות במייל! </strong>הזן כתובת מייל חוקית
+                        </div>
+                    </div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-icon-float md-block" style="text-align: right">
+                <input name="tempPassword" ng-pattern="regexToken" class="form-control" ng-model="data.tempPassword" placeholder="הכנס סיסמא זמנית" type="text" required>
+                <div ng-messages="authenticaterForm.tempPassword.$error">
+                    <div ng-message="required">
+                        שדה חובה
+                    </div>
+                    <div ng-message="pattern">
+                        <div class="alert alert-warning">
+                            <strong>טעות מפתח! </strong>     הזן את המפתח שנשלח אליך למייל , צריך להכיל 8 תווים בדיוק
+                        </div>
+                    </div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-icon-float md-block" style="text-align: right">
+                <input name="password" ng-pattern="regexPassword" class="form-control" ng-model="data.password" placeholder="הכנס סיסמא" type="password" required>
+                <div ng-messages="authenticaterForm.password.$error">
+                    <div ng-message="required">
+                        שדה חובה
+                    </div>
+                    <div ng-message="pattern">
+                        <div class="alert alert-warning">
+                            <strong>טעות בסיסמא!</strong>    סיסמא צריכה להכיל אות קטנה אות גדולה ומספרים באורך של 6 תווים לפחות
+                        </div>
+                    </div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-icon-float md-block" style="text-align: right">
+                <input name="confirmPassword" ng-pattern="regexPassword" class="form-control" ng-model="data.confirmPassword" placeholder="הכנס אישור סיסמא" type="password" required>
+                <div ng-messages="authenticaterForm.confirmPassword.$error">
+                    <div ng-message="required">
+                        שדה חובה
+                    </div>
+                    <div ng-message="pattern">
+                        <div class="alert alert-warning">
+                            <strong>טעות בסיסמא!</strong>      אישור  סיסמא צריך להכיל אות קטנה אות גדולה ומספרים באורך של 6 תווים לפחות
+                        </div>
+                    </div>
+                </div>
+            </md-input-container>
+            <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+                <md-button  type="submit" class="md-raised md-primary">שחזר</md-button>
+                <md-button ng-click="switchState('logIn')" class="md-raised">חזור</md-button>
+            </section>
+        </form>
+    </div>
+</div>

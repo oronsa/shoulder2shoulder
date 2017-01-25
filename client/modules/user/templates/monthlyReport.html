@@ -1,0 +1,66 @@
+<div class="row">
+    <div class="col-lg-12" >
+        <h1 class="page-header">מלא דו"ח חודשי</h1>
+        <div class="col-lg-12">
+            <div class="panel panel-platColor4">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> פרטי הדו"ח</h3>
+                </div>
+                <div class="panel-body">
+
+                    <md-content layout-padding="">
+                        <form name="userForm">
+                            <div layout-gt-sm="row">
+                                <md-select ng-model="data.date" aria-label="Close" placeholder="בחר חודש">
+                                    <md-option ng-repeat="item in months">{{ item.month }} {{ item.year }}</md-option>
+                                </md-select>
+                            </div>
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>הכנס משכורת</label>
+                                    <input ng-model="data.salary" type="number" min="0">
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>קצבת ילדים</label>
+                                    <input type="number" min="0"  ng-model="data.childrenAllowances">
+                                </md-input-container>
+                            </div>
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>סיוע בשכר דירה</label>
+                                    <input type="number" min="0" ng-model="data.rent">
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>מזונות</label>
+                                    <input type="number" min="0"  ng-model="data.alimony">
+                                </md-input-container>
+                            </div>
+                            <div layout-gt-sm="row">
+                                <md-input-container  class="md-block" flex-gt-sm="">
+                                    <label>הכנסות שונות</label>
+                                    <input type="number" min="0"  ng-model="data.other">
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>קצבאות נוספת</label>
+                                    <input type="number" min="0" ng-model="data.allowances">
+                                </md-input-container>
+                            </div>
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label>הערות</label>
+                                    <textarea ng-model="data.description" md-maxlength="150" rows="5" md-select-on-focus="" ></textarea>
+                                </md-input-container>
+                            </div>
+
+                        </form>
+                    </md-content>
+                </div>
+                <div class="panel-footer">
+                    <div layout-gt-md="row">
+                        <md-button class="md-raised md-primary" ng-click="submitData()">שלח</md-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

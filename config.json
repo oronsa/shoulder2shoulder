@@ -1,0 +1,57 @@
+{
+  "mongoDBUrl" : "mongodb://Shoulder:jce1234@ds015902.mlab.com:15902/accounting-shoulder-db",
+  "mailAddress":"software.a.team@gmail.com",
+  "mailPass":  "jceac1234",
+  "AUTH": {
+
+  },
+  "COLLECTIONS": {
+    "ACCOUNTS" : "accounts",
+    "USERS": "users",
+    "MESSAGES": "messages",
+    "BILLS" : "bills",
+    "REPORTS" : "reports",
+    "TOKEN_ACCOUNTS": "tokenAccounts",
+    "EMAIL_CHANGE_REQUESTS" : "emailChangeRequests",
+    "RECOVERY_TOKENS":  "recoveryTokens"
+  },
+  "ROLES": {
+    "SUPER_ADMIN" : "superAdmin",
+    "ADMIN" : "admin",
+    "USER" : "user",
+    "GUEST" : "guest"
+  },
+  "APP_ENTRIES" : {
+    "admin" : "adminHome",
+    "superAdmin" : "adminHome",
+    "user" : "userHome",
+    "guest" : "logIn"
+  },
+  "PATHS" : {
+    "guest" : {
+      "logIn" : "logIn",
+      "signUp" : "signUp",
+      "passwordRecovery" : "passwordRecovery",
+      "authenticateRecovery":"authenticateRecovery"
+    },
+    "user" : {
+      "userProfileEdit" : "userProfileEdit",
+      "userHome" : "userHome",
+      "addBill" : "addBill",
+      "viewBills" : "viewBills",
+      "monthlyReport" : "monthlyReport",
+      "changeEmail" : "changeEmail",
+      "changePassword" : "changePassword",
+      "viewReports" : "viewReports"
+    },
+    "admin" : {
+      "userProfileEdit" : "userProfileEdit",
+      "adminHome" : "adminHome",
+      "adminOption" : "adminOption",
+      "superAdminOption" : "superAdminOption",
+      "userView" : "userView",
+      "changeEmail" : "changeEmail",
+      "changePassword" : "changePassword"
+    }
+  }
+}

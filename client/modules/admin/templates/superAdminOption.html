@@ -1,0 +1,98 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header"> אפשרויות </h1>
+    </div>
+    <div class="col-lg-12">
+        <md-content layout-padding="" name="superAdminForm">
+            <div class="col-lg-3">
+                <div class="panel panel-platColor2">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-key"></i> מפתחות משתמשים</h3>
+                    </div>
+                    <form name="sendTokenForm" ng-submit="submitData()">
+                        <div class="panel-body">
+                            <md-radio-group ng-model="data.type" dir="rtl" required>
+                                <md-radio-button value="user" class="md-primary">משפחה</md-radio-button>
+                                <md-radio-button value="admin" class="md-primary">מדריך</md-radio-button>
+                                <md-radio-button value="superAdmin" class="md-primary">מנהל</md-radio-button>
+                            </md-radio-group>
+                            <md-input-container class="md-active" flex-gt-sm="">
+                                <input name="email" ng-model="data.email" ng-pattern="regexMail"
+                                       placeholder="הכנס מייל משתמש" type="email" required/>
+                                <div ng-messages="sendTokenForm.email.$error">
+                                    <div ng-message="pattern">
+                                        <div class="alert alert-warning">
+                                            <strong>טעות במייל! </strong>הזן כתובת מייל חוקית
+                                        </div>
+                                    </div>
+                                </div>
+                            </md-input-container>
+                            <div class="panel-footer">
+                                <button type="submit" class="btn btn-success btn-md">שלח מפתח</button>
+                            </div>
+                    </form>
+
+                </div>
+            </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="panel panel-platColor2">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-users"></i> מחיקת משתמשים </h3>
+            </div>
+            <form name="deleteUserForm" ng-submit="deleteUser()">
+                <div class="panel-body">
+                    <md-input-container class="md-active" flex-gt-sm="">
+                        <md-select ng-model="selectedUser" aria-label="Close" name="user" placeholder="בחר אימייל של משתמש"
+                                   required="">
+                            <md-option ng-repeat="item in allUsers" ng-bind="item.email"></md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container class="md-icon-float md-block">
+                        <input name="password" ng-model="data.password" placeholder="הזן סיסמא לצורך אישור מחיקה"
+                               ng-pattern="regexPassword" type="password" required>
+                        <div ng-messages="deleteUserForm.password.$error">
+                            <div ng-message="required">
+                                שדה חובה
+                            </div>
+                            <div ng-message="pattern">
+                                <div class="alert alert-warning">
+                                    <strong>טעות בסיסמא!</strong> סיסמא צריכה להכיל אות קטנה אות גדולה ומספרים באורך של
+                                    6 תווים לפחות
+                                </div>
+                            </div>
+                        </div>
+                    </md-input-container>
+                </div>
+                <div class="panel-footer">
+                    <button type="submit" class="btn btn-success btn-md">מחק משתמש</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="panel panel-platColor2">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-users"></i> צוות משפחה למנהל </h3>
+            </div>
+            <div class="panel-body">
+                <md-input-container class="md-active" flex-gt-sm="">
+                    <md-select ng-model="selectedFamily" aria-label="Close" name="user" placeholder="בחר משפחה"
+                               required="">
+                        <md-option ng-repeat="item in allFamilies" ng-bind="item.userName"></md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container class="md-active" flex-gt-sm="">
+
+                    <md-select ng-model="selectedLeader" aria-label="Close" name="leader"
+                               placeholder="בחר מדריך" required="">
+                        <md-option ng-repeat="item in allLeaders" ng-bind="item.userName"></md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+            <div class="panel-footer">
+                <button class="btn btn-success btn-md" ng-click="assign()">צוות</button>
+            </div>
+        </div>
+    </div>
+</div>

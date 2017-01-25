@@ -1,0 +1,139 @@
+<div class="login-page">
+    <div class="row">
+        <div class="col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4">
+            <img src="style/gallery/logo.PNG"/>
+            <h1>הרשמה <small>עוד רגע מתחילים</small></h1>
+            <form name="SignUpForm" ng-submit="submitData()" style="text-align: right">
+                <md-input-container class="md-icon-float md-block">
+                    <input type="email" ng-pattern="regexMail" name="email" class="form-control" ng-model="userData.email" placeholder="כתובת דואר אלקטרוני"
+                           required>
+                    <div ng-messages="SignUpForm.email.$error">
+                        <div ng-message="required">
+                            שדה חובה
+                        </div>
+                        <div ng-message="pattern">
+                            <div class="alert alert-warning">
+                                <strong>טעות במייל! </strong>הזן כתובת מייל חוקית
+                            </div>
+                        </div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-icon-float md-block">
+                    <input  name="token" ng-model="userData.token" placeholder="הזן מפתח אשר נשלח אליך במייל"
+                            ng-pattern="regexToken" type="text" required>
+                    <div ng-messages="SignUpForm.token.$error">
+                        <div ng-message="required">
+                            שדה חובה
+                        </div>
+                        <div ng-message="pattern">
+                            <div class="alert alert-warning">
+                                <strong>טעות מפתח! </strong>     הזן את המפתח שנשלח אליך למייל , צריך להכיל 8 תווים בדיוק
+                            </div>
+                        </div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-icon-float md-block">
+                    <input name="password" ng-model="userData.password" placeholder="סיסמא"
+                           ng-pattern="regexPassword"  type="password"  required>
+                    <div ng-messages="SignUpForm.password.$error">
+                        <div ng-message="required">
+                                שדה חובה
+                        </div>
+                        <div ng-message="pattern">
+                            <div class="alert alert-warning">
+                                <strong>טעות בסיסמא!</strong>    סיסמא צריכה להכיל אות קטנה אות גדולה ומספרים באורך של 6 תווים לפחות
+                            </div>
+                        </div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-icon-float md-block">
+                    <input name="confirmPassword" ng-model="userData.confirmPassword" placeholder="אישור סיסמא"
+                            ng-pattern="regexPassword"   type="password" required>
+                    <div ng-messages="SignUpForm.confirmPassword.$error">
+                        <div ng-message="required">
+                            שדה חובה
+                        </div>
+                        <div ng-message="pattern">
+                            <div class="alert alert-warning">
+                                <strong>טעות בסיסמא!</strong>      אישור  סיסמא צריך להכיל אות קטנה אות גדולה ומספרים באורך של 6 תווים לפחות
+                            </div>
+                        </div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-icon-float md-block">
+                    <input name="userName" ng-model="userData.userName" placeholder="שם משתמש" type="text" ng-pattern="regexUserName"  required>
+                    <div ng-messages="SignUpForm.userName.$error">
+                        <div ng-message="required">
+                            שדה חובה
+                        </div>
+                        <div ng-message="pattern">
+                            <div class="alert alert-warning">
+                                <strong>טעות !</strong>                        שדה זה צריך להכיל שם באנגלית בלבד ומספרים לדוגמא: yosi560
+                            </div>
+                        </div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-icon-float md-block">
+                    <input name="firstName" ng-model="userData.firstName" placeholder=" שם פרטי" type="text" ng-pattern="regexName"  required>
+                    <div ng-messages="SignUpForm.firstName.$error">
+                        <div ng-message="required">
+                            שדה חובה
+                        </div>
+                        <div ng-message="pattern">
+                            <div class="alert alert-warning">
+                                <strong>טעות !</strong>                                                שדה זה צריך להכיל שם פרטי בעברית בלד לדוגמא : פלוני
+                            </div>
+                        </div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-icon-float md-block">
+                    <input name="lastName" ng-model="userData.lastName" placeholder=" שם משפחה" type="text" ng-pattern="regexName"  required>
+                    <div ng-messages="SignUpForm.lastName.$error">
+                        <div ng-message="required">
+                            שדה חובה
+                        </div>
+                        <div ng-message="pattern">
+                            <div class="alert alert-warning">
+                                <strong>טעות !</strong>                                                 שדה זה צריך להכיל שם משפחה בעברית בלד לדוגמא : אלמוני
+                            </div>
+
+                        </div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-icon-float md-block">
+                    <input  ng-model="userData.address" placeholder=" כתובת" type="text"  required>
+                </md-input-container>
+                <md-input-container class="md-icon-float md-block">
+                    <input name="phone1" ng-model="userData.phone1"  placeholder=" טלפון" type="tel" ng-pattern="regexPhone" minlength="9" required>
+                    <div ng-messages="SignUpForm.phone1.$error">
+                        <div ng-message="required">
+                            שדה חובה
+                        </div>
+                        <div ng-message="minlength">
+                            דרושים לפחות 9 ספרות
+                        </div>
+                        <div ng-message="pattern">
+                            <div class="alert alert-warning">
+                                <strong>טעות !</strong>                                                  מספר אינו חוקי השתמש במספרים או בסימן "-" בלבד
+                            </div>
+                        </div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-icon-float md-block">
+                    <input name="phone2" ng-model="userData.phone2"  placeholder=" טלפון נוסף" type="tel" minlength="9">
+                    <div ng-messages="SignUpForm.phone2.$error">
+                        <div ng-message="minlength">
+                            דרושים לפחות 9 ספרות
+                        </div>
+                    </div>
+                </md-input-container>
+                <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+                    <md-button  type="submit" class="md-raised md-primary">הרשמה</md-button>
+                <md-button ng-click="switchState('logIn')" class="md-raised">חזור</md-button>
+                </section>
+            </form>
+            <hr>
+        </div>
+    </div>
+</div>
+

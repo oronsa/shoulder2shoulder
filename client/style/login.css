@@ -1,0 +1,24 @@
+.login-page {
+    text-align: center;
+    color: #011f4b;
+}
+#sm {
+    color: 	#005b96;
+}
+#line{
+    color: #011f4b;
+}
+#bLogin{
+    color: #005b96;
+    text-align: center;!important;
+    background-color: #fff;
+    border-color: #005b96;
+    border-radius: 50px;
+}
+#bRegis{
+    color: #005b96;
+    text-align: center;!important;
+    background-color: #fff;
+    border-color: #005b96;
+    border-radius: 50px;
+}

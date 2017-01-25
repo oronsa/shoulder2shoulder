@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var app = require('../server/app');
+var config = require('../config.json');
+var mongoUtil = require('../server/utils/mongoUtils');
+
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+var DB_URL = process.env.MONGODB_URL || config.mongoDBUrl;
+
+var port = process.env.PORT || 8080;
+
+mongoUtil.connect(DB_URL);
+
+app.set('port', port);
+
+/**
+ * Create HTTP server.
+ */
+var server = require('http').createServer(app);
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+server.listen(port, function () {
+  console.log('Listening on port ' + port + '\n');
+});

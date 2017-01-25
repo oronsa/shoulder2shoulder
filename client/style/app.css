@@ -1,0 +1,167 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+*{
+    direction: rtl;
+}
+
+header {
+    padding-bottom:10px;
+    height:150px;
+    max-width:450px;
+    margin: 0 auto;
+}
+
+#container {
+    min-height:100%;
+    position:relative;
+}
+footer {
+
+    position:static;
+    bottom:0;
+    width:100%;
+ /* Height of the footer */
+    text-align: center;
+}
+#entry {
+    text-align: center;
+}
+#homeDiv {
+    text-align: center;
+}
+iframe {
+    margin-top: 5%;
+    margin-left: 35%;
+    text-align: center;
+}
+
+.container > .replaceNav{
+    max-height: 500px;
+    max-width: 500px;
+
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.aboutUs {
+    font-family : Arial serif;
+    font-size: 100%;
+    text-align: right;
+
+}
+/*-------------Galaery-------------------*/
+.carousel {
+    height: 500px;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+/*    padding-top: 20px;*/
+    max-height: 500px;
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+.links {
+    text-align: center;
+}
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+
+.modal-header, h4, .close {
+    color: white !important;
+    text-align: center;
+    font-size: 30px;
+}
+.inputdemoBasicUsage .md-datepicker-button {
+}
+.md-datepicker-triangle-button.md-button.md-icon-button {
+    width: 36px;
+    position: static;
+}
+.md-datepicker-input{
+    color:#2b669a;
+    padding-left:190px;
+    text-align: left;
+}
+
+.md-datepicker-input[placeholder]{
+    text-align: left;
+    padding-left:190px;
+}
+.md-calendar-date-selection-indicator {
+    padding-right: 12px;
+}
+#showFamily
+{
+    float: left;
+    padding-left:50%;
+    padding-top: 150px;
+}
+#showBills{
+     float: left;
+    padding-left:50px;
+    padding-top: 150px;
+}
+#headLine{
+    padding-top:15px;
+    padding-right:40%;
+    text-align:center;
+    font-family: Papyrus, fantasy;
+    font-size: 35px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.4px;
+    color:#1e347b;
+}
+md-content{
+    border-radius:30px;
+    color: #1e347b;
+}
+#titlePage{
+    padding-top: 40px;
+    display: block;
+    height:238px;
+    background-image:url("gallery/day-bg.png");
+    border-radius: 20px;
+}
+@media screen and (max-width: 600px) {
+    #titlePage {
+
+        height: 105px;
+        background-image: none;
+        border-radius: 20px;
+    }
+    img {
+        display: none;
+    }
+}
+#selectDisplay{
+    display: inline-block;
+}
+/*alert*/
+.modal {
+    display: block;
+}
+
+.dialog-header-error { background-color: #d2322d; }
+.dialog-header-wait { background-color: #428bca; }
+.dialog-header-notify { background-color: #eeeeee; }
+.dialog-header-confirm { background-color: #333333; }
+.dialog-header-error span, .dialog-header-error h4,
+.dialog-header-wait span, .dialog-header-wait h4,
+.dialog-header-confirm span, .dialog-header-confirm h4 { color: #ffffff; }
+
+/* Ease Display */
+
+.pad { padding: 25px; }
+#dropdown2{
+    color: #fff;
+}

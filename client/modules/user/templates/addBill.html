@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">הוספת הוצאה חדשה</h1>
+        <div class="panel panel-platColor3">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> פרטי הוצאה</h3>
+            </div>
+            <div class="panel-body">
+                <md-content layout-padding="">
+            <form name="datepickerForm" class="form-inline" role="form">
+                <div class="form-group">
+                    <md-datepicker 
+                        ng-model="data.date" 
+                        md-placeholder="תאריך" 
+                        name="date">
+                    </md-datepicker>
+                </div>
+                <br>
+                <div layout-gt-sm="row">
+                    <md-select ng-model="data.categoryOfPayment" aria-label="Close" name="categoryOfPayment"  placeholder="בחר אמצעי תשלום" required="">
+                        <md-option ng-repeat="item in payments" required>{{ item.name }}</md-option>
+                    </md-select>
+                    <md-select ng-model="data.category" aria-label="Close" name="category"   placeholder="בחר קטגוריה" required="">
+                        <md-option ng-repeat="item in categories" required>{{ item.name }}</md-option>
+                    </md-select>
+                </div>
+
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm="">
+                        <label for="incoming"> סכום הוצאה</label>
+                        <input type="number" min="0" required="" id="incoming" ng-model="data.amount">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm="">
+                        <label for="exampleTextArea">תיאור נוסף</label>
+                        <textarea class=text-info id="exampleTextArea"  ng-model="data.description"></textarea>
+                    </md-input-container>
+                </div>
+
+            </form>
+        </md-content>
+            </div>
+            <div class="panel-footer">
+                <div layout-align-gt-sm="row">
+                    <md-button ng-click="submitData(false)"> שמור והמשך להזין נתונים <span class="glyphicon glyphicon-send"></span></md-button>
+                    <md-button  ng-click="submitData(true)"> שמור ועבור לסיכום <span class="glyphicon glyphicon-send"></span></md-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
